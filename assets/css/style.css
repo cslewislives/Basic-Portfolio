@@ -18,6 +18,13 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em 0 1em 0;
+    font-weight: bold;
+}
+
 a {
     text-decoration: none;
 }
@@ -34,7 +41,7 @@ body {
     flex-direction: column;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
 }
 
@@ -109,7 +116,7 @@ li a:hover {
 
 hr {
     background: #ececec;
-    margin: 10px 0 20px 0;
+    margin: 20px 0 20px 0;
     padding: 1.5px;
     border: none;
 }
@@ -124,9 +131,11 @@ hr {
     margin: 0 20px 40px 0;
 }
 
-.bio h1 {
+.bio h2 {
     color: #4aaaa5;
     padding-top: 10px;
+    font-size: 2em;
+    margin: 0.67em 0 0.67em 0;
 }
 
 #bio-image {
@@ -150,8 +159,10 @@ aside {
     padding: 30px;
 }
 
-aside h2 {
+aside h3 {
     color: #4aaaa5;
+    font-size: 1.5em;
+    margin-top: 0.83em 0 0.83em 0;
 }
 
 .icons {
