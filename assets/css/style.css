@@ -79,7 +79,6 @@ nav {
 }
 
 nav ul {
-    list-style-type: none; /* to make a list horizontal */
     margin: 0;
     font-size: 1.1em; /* em stands for relative to the font-size element. so this is 1.1 times its font-size. this also helps a lot with resizing browser and such rather than a fixed pixel amount */
 }
