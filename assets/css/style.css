@@ -1,46 +1,43 @@
+/* Stylesheet for all 3 .html files for this webpage */
+
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Used to make sure that padding and margins are added to the total width and height of an element */
 }
 
 html, body {
-    height: 100%;
-    margin: auto;
-    display: block;
+    height: 100%;/* used for the flex-box to have the sticky footer. this is the flexible part */
+    margin: auto; 
     background: url("../images/dust_scratches.png") #ececec;
 }
 
+/* added so that after reset.css my headings were then set to default css settings */
 h1 { 
-    display: block;
     font-size: 2em;
     margin: 0.67em 0;
     font-weight: bold;
 }
 
 h2 {
-    display: block;
     font-size: 1.5em;
     margin: 0.83em 0;
     font-weight: bold;
 }
 
 h3 {
-    display: block;
     font-size: 1.17em;
     font-weight: bold;
 }
 
+/* begin styling components for all pages */
 a {
+    /* remove normal link decoration */
     text-decoration: none;
-}
-
-div {
-    display: block;
 }
 
 body {
     color: #777777;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    display: flex;
+    display: flex; /* flex-box for sticky footer */
     flex-direction: column;
 }
 
@@ -49,8 +46,7 @@ h1, h2, h3 {
 }
 
 .menu {
-    max-width: 960px;
-    position: relative;
+    max-width: 960px; /* slightly more flexible than width */
     margin: 0 auto;
 }
 
@@ -59,64 +55,64 @@ header {
     border-bottom: 2px solid #ccc;
     margin-bottom: 40px;
     width: auto;
-    display: block;
 }
 
 .logo {
     background: #4aaaa5;
     text-align: center;
     float: left;
-    margin-left: 0;
     color: #fff;
     padding: 10px 20px;
 }
 
+/* fun bit of extra styling. button changes color when hovered over */
 .logo:hover {
     background: #FFA06F;
 }
 
+/* originally used positioning to place the nav buttons, but began looking more into display: flex and saw that you can vertically center elements in a div and so played around with it for a while and got the same result as positioning but now it is perfectly centered. */
 nav {
-    display: block;
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style-type: none; /* to make a list horizontal */
     margin: 0;
-    font-size: 1.1em;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    overflow: hidden;
+    font-size: 1.1em; /* em stands for relative to the font-size element. so this is 1.1 times its font-size. this also helps a lot with resizing browser and such rather than a fixed pixel amount */
 }
 
 li {
-    float: right;
+    float: right; /* keeps the nav bar aligned */
 }
 
 li a {
-    display: block;
     text-align: center;
     padding: 0 16px;
     color: #777777;
 }
 
+/* again change color on hover */
 li a:hover {
     color: #4aaaa5;
 }
 
+/* create the break between links on nav bar */
 #about, 
 #portfolio {
     border-right: 1px solid #ccc;
 }
 
+/* keep all the content centered on the page and only 960px wide */
 .wrapper {
     width: 960px;
     margin: 0 auto;
-    flex: 1 0 auto;
-    /* position: relative; */
+    flex: 1 0 auto; /* more sticky footer code */
 }
 
-
+/* how I created the break between headings and content */
 hr {
     background: #ececec;
     margin: 20px 0;
@@ -128,31 +124,17 @@ hr {
     background: #fff;
     border: 2px solid #dddddd;
     float: left;
-    clear: both;
     width: 650px;
     padding: 0 30px 20px 30px;
     margin: 0 20px 40px 0;
-    /* position: relative; */
 }
 
+/* I made the .content h2 as large as an h1 but this way I only technically have one h1 for validation purposes */
 .content h2 {
     color: #4aaaa5;
     padding-top: 10px;
     font-size: 2em;
     margin: 0.67em 0;
-}
-
-#bio-image {
-    display: block;
-    max-width: 200px;
-    float: left;
-    margin: 5px 20px 10px 0;
-}
-
-p {
-    line-height: 1.5em;
-    display: block;
-    margin: 1em 0 1em 0;
 }
 
 aside {
@@ -188,6 +170,19 @@ footer {
     display: block;
 }
 
+/* index.html specific code */
+#bio-image {
+    max-width: 200px;
+    float: left;
+    margin: 5px 20px 10px 0;
+}
+
+p {
+    line-height: 1.5em;
+    margin: 1em 0;
+}
+
+/* contact.html specific code */
 input[type=text] {
     width: 100%;
     padding: 5px;
@@ -216,8 +211,8 @@ textarea {
     border: 1.5px solid #ccc;
     border-radius: 2px;
     outline: none;
-    resize: none;
-    overflow: hidden;
+    resize: none; /* no resizing here */
+    overflow: hidden; /* remove scroll bar */
 }
 
 input[type=submit] {
@@ -229,12 +224,15 @@ input[type=submit] {
     padding: 10px 20px;
     width: 20%;
     border: none;
+    outline: none;
 }
 
-input[type=submit]:hover {
+/* change color when clicked */
+input[type=submit]:active {
     background: #FFA06F;
 }
 
+/* placeholder text in forms so that you dont have to delete the example text */
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #ccc;
   }
@@ -248,6 +246,8 @@ color: #ccc;
 color: #ccc;
 }
 
+/* portfolio.html specific code */
+/* Gryffindor */
 .image1 {
     position: relative;
     width: 50%;
@@ -261,12 +261,14 @@ img {
     height: auto;
 }
 
+/* show outline on hover */
 .gallery img:hover {
-    border: 3px solid #4aaaa5;
+    outline: 3px solid #4aaaa5;
+    outline-offset: -3px;
 }
 
-
-#gryffindor {
+/* text overlays */
+.desc {
     padding: 10px 15px;
     background: #4aaaa5;
     color: white;
@@ -276,9 +278,9 @@ img {
     position: absolute;
     width: 273px;
     bottom: 25%;
-    z-index: 1;
 }
 
+/* Hufflepuff */
 .image3 {
     width: 50%;
     height: auto;
@@ -287,19 +289,7 @@ img {
     position: relative;
 }
 
-#hufflepuff {
-    padding: 10px 15px;
-    background: #4aaaa5;
-    color: white;
-    text-align: center;
-    font-size: 1em;
-    font-family: 'Georgia', 'Times New Roman', Times, serif; 
-    position: absolute;
-    width: 273px;
-    bottom: 25%;
-    z-index: 1;
-}
-
+/* Ravenclaw */
 .image2 {
     width: 50%;
     height: auto;
@@ -308,42 +298,11 @@ img {
     position: relative;
 }
 
-#ravenclaw {
-    padding: 10px 15px;
-    background: #4aaaa5;
-    color: white;
-    text-align: center;
-    font-size: 1em;
-    font-family: 'Georgia', 'Times New Roman', Times, serif; 
-    position: absolute;
-    width: 273px;
-    bottom: 25%;
-    z-index: 1;
-}
-
+/* Slytherin */
 .image4 {
     width: 50%;
     height: auto;
     padding: 20px 0 40px 20px;
     float: left;
     position: relative;
-}
-
-#slytherin {
-    padding: 10px 15px;
-    background: #4aaaa5;
-    color: white;
-    text-align: center;
-    font-size: 1em;
-    font-family: 'Georgia', 'Times New Roman', Times, serif; 
-    position: absolute;
-    width: 273px;
-    bottom: 25%;
-    z-index: 1;
-}
-
-.gallery:after {
-    content: "";
-    display: table;
-    clear: both;
 }
