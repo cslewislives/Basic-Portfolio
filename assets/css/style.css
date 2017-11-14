@@ -1,10 +1,29 @@
 html, body {
     height: 100%;
     margin: auto;
+    display: block;
+}
+
+h1 { 
+    display: block;
+    font-size: 2em;
+    margin: 0.67em 0 0.67em 0;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em 0 0.83em 0;
+    font-weight: bold;
 }
 
 a {
     text-decoration: none;
+}
+
+div {
+    display: block;
 }
 
 body {
@@ -28,8 +47,9 @@ h1, h2 {
 header {
     background: #fff;
     border-bottom: 2px solid #ccc;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     width: auto;
+    display: block;
 }
 
 .logo {
@@ -44,6 +64,10 @@ header {
 
 .logo:hover {
     background: #FFA06F;
+}
+
+nav {
+    display: block;
 }
 
 nav ul {
@@ -95,8 +119,8 @@ hr {
     border: 2px solid #dddddd;
     float: left;
     clear: both;
-    width: 610px;
-    padding: 0 20px 20px 20px;
+    width: 590px;
+    padding: 0 30px 20px 30px;
     margin: 0 20px 40px 0;
 }
 
@@ -114,6 +138,8 @@ hr {
 
 p {
     line-height: 1.5em;
+    display: block;
+    margin: 1em 0 1em 0;
 }
 
 aside {
@@ -121,7 +147,7 @@ aside {
     float: left;
     background: #fff;
     border: 2px solid #dddddd;
-    padding: 0 30px 30px 30px;
+    padding: 30px;
 }
 
 aside h2 {
@@ -143,4 +169,5 @@ footer {
     color: #ccc;
     margin: 0;
     border-top: 10px solid #4aaaa5;
+    display: block;
 }
