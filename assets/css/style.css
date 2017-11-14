@@ -225,6 +225,7 @@ input[type=submit] {
     width: 20%;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 /* change color when clicked */
