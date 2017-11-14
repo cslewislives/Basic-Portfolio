@@ -21,6 +21,7 @@ h1, h2 {
 
 .menu {
     max-width: 960px;
+    position: relative;
     margin: 0 auto;
 }
 
@@ -48,23 +49,31 @@ header {
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    font-size: 1.1em;
+    position: absolute;
+    top: 40px;
+    right: 0;
     overflow: hidden;
 }
 
 li {
-    float: left;
+    float: right;
 }
 
 li a {
     display: block;
     text-align: center;
-    padding: 16px;
+    padding: 0 16px 0 16px;
     color: #777777;
 }
 
 li a:hover {
-    background: #4aaaa5;
+    color: #4aaaa5;
+}
+
+#about, 
+#portfolio {
+    border-right: 1px solid #ccc;
 }
 
 .wrapper {
@@ -103,6 +112,10 @@ hr {
     margin: 5px 20px 10px 0;
 }
 
+p {
+    line-height: 1.5em;
+}
+
 aside {
     width: 210px;
     float: left;
@@ -125,6 +138,7 @@ footer {
     padding: 20px;
     clear: both;
     background: #666;
+    font-size: .95em;
     text-align: center;
     color: #ccc;
     margin: 0;
