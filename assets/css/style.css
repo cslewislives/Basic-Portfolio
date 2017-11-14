@@ -1,27 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     margin: auto;
     display: block;
+    background: url("../images/dust_scratches.png") #ececec;
 }
 
 h1 { 
     display: block;
     font-size: 2em;
-    margin: 0.67em 0 0.67em 0;
+    margin: 0.67em 0;
     font-weight: bold;
 }
 
 h2 {
     display: block;
     font-size: 1.5em;
-    margin-top: 0.83em 0 0.83em 0;
+    margin: 0.83em 0;
     font-weight: bold;
 }
 
 h3 {
     display: block;
     font-size: 1.17em;
-    margin-top: 1em 0 1em 0;
     font-weight: bold;
 }
 
@@ -34,7 +38,6 @@ div {
 }
 
 body {
-    background: #ececec;
     color: #777777;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     display: flex;
@@ -61,12 +64,11 @@ header {
 
 .logo {
     background: #4aaaa5;
-    box-sizing: border-box;
     text-align: center;
     float: left;
     margin-left: 0;
     color: #fff;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
 }
 
 .logo:hover {
@@ -94,7 +96,7 @@ li {
 li a {
     display: block;
     text-align: center;
-    padding: 0 16px 0 16px;
+    padding: 0 16px;
     color: #777777;
 }
 
@@ -111,31 +113,33 @@ li a:hover {
     width: 960px;
     margin: 0 auto;
     flex: 1 0 auto;
+    /* position: relative; */
 }
 
 
 hr {
     background: #ececec;
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
     padding: 1.5px;
     border: none;
 }
 
-.bio {
+.content {
     background: #fff;
     border: 2px solid #dddddd;
     float: left;
     clear: both;
-    width: 586px;
+    width: 650px;
     padding: 0 30px 20px 30px;
     margin: 0 20px 40px 0;
+    /* position: relative; */
 }
 
-.bio h2 {
+.content h2 {
     color: #4aaaa5;
     padding-top: 10px;
     font-size: 2em;
-    margin: 0.67em 0 0.67em 0;
+    margin: 0.67em 0;
 }
 
 #bio-image {
@@ -152,11 +156,12 @@ p {
 }
 
 aside {
-    width: 210px;
+    width: 270px;
     float: left;
     background: #fff;
+    text-align: center;
     border: 2px solid #dddddd;
-    padding: 30px;
+    padding: 25px;
 }
 
 aside h3 {
@@ -181,4 +186,164 @@ footer {
     margin: 0;
     border-top: 10px solid #4aaaa5;
     display: block;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0 20px 0;
+    color: #777;
+    border: 1.5px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0 20px 0;
+    color: #777;
+    border: 1.5px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0 20px 0;
+    color: #777;
+    border: 1.5px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+}
+
+input[type=submit] {
+    background: #4aaaa5;
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    width: 20%;
+    border: none;
+}
+
+input[type=submit]:hover {
+    background: #FFA06F;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ccc;
+  }
+::-moz-placeholder { /* Firefox 19+ */
+color: #ccc;
+}
+:-ms-input-placeholder { /* IE 10+ */
+color: #ccc;
+}
+:-moz-placeholder { /* Firefox 18- */
+color: #ccc;
+}
+
+.image1 {
+    position: relative;
+    width: 50%;
+    height: auto;
+    padding: 20px 20px 40px 0;
+    float: left;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery img:hover {
+    border: 3px solid #4aaaa5;
+}
+
+
+#gryffindor {
+    padding: 10px 15px;
+    background: #4aaaa5;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Georgia', 'Times New Roman', Times, serif; 
+    position: absolute;
+    width: 273px;
+    bottom: 25%;
+    z-index: 1;
+}
+
+.image3 {
+    width: 50%;
+    height: auto;
+    padding: 20px 20px 40px 0;
+    float: left;
+    position: relative;
+}
+
+#hufflepuff {
+    padding: 10px 15px;
+    background: #4aaaa5;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Georgia', 'Times New Roman', Times, serif; 
+    position: absolute;
+    width: 273px;
+    bottom: 25%;
+    z-index: 1;
+}
+
+.image2 {
+    width: 50%;
+    height: auto;
+    padding: 20px 0 40px 20px;
+    float: left;
+    position: relative;
+}
+
+#ravenclaw {
+    padding: 10px 15px;
+    background: #4aaaa5;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Georgia', 'Times New Roman', Times, serif; 
+    position: absolute;
+    width: 273px;
+    bottom: 25%;
+    z-index: 1;
+}
+
+.image4 {
+    width: 50%;
+    height: auto;
+    padding: 20px 0 40px 20px;
+    float: left;
+    position: relative;
+}
+
+#slytherin {
+    padding: 10px 15px;
+    background: #4aaaa5;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Georgia', 'Times New Roman', Times, serif; 
+    position: absolute;
+    width: 273px;
+    bottom: 25%;
+    z-index: 1;
+}
+
+.gallery:after {
+    content: "";
+    display: table;
+    clear: both;
 }
