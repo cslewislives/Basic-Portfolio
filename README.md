@@ -1,2 +1,2 @@
 # Basic-Portfolio
-First homework assignment for class. Creating a basic portfolio page.
+Creating a Basic About Me and Portfolio page.
